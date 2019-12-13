@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form Validation</title>
+    <style>
+          label {display: block;}
+          body {padding: 25px;}
+    </style>
+  </head>
+  <script>
+    window.addEventListener("load", function() {
+      let form = document.querySelector("form");
+      form.addEventListener("submit", function(event) {
+        // we can get a reference to the input elements in the DOM and check the value property of each
+        let usernameInput = document.querySelector("input[name=username]");
+        let teamname = document.querySelector("input[name=team]");
+        // add conditional statements
+        if (usernameInput.value === "" || teamName.value === "") {
+             alert("All fields are required");
+             // stop the form submission
+             // prevents form from being submitted when the <button> tags are clicked inside the form
+             event.preventDefault();
+        }
+      });
+    });
+
+       
+  </script>
+  <body>
+    <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
+      <label>Username <input type="text" name="username"></label>
+      <label>Team Name <input type="text" name="team"></label>
+      <button>Submit</button>
+    </form>
+
+    <p>WARNING: This ONLY works in <b>replit</b> if this "result" page is opened in its own window. Click the icon that shows a box with an arrow coming out of it.
+    </p>
+  </body>
+</html>

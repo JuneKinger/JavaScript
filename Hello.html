@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8"/>
+      <title>Add content using DOM</title>
+</head>      
+<body>
+    <p id="main-text">Hello world...</p>
+    <script>
+        // document is a global DOM variable
+        // The document class provides properties and methods to find, add, remove, and alter HTML elements inside on the web page.
+        // document.getElementById - Returns a reference to the element that's id attribute matches the given string value.
+        let p = document.getElementById("main-text");
+        // add text to the p tag - element.append
+        p.append("My first JavaScript browser code");
+        // element.innerHTML reads the HTML inside an element
+        console.log(p.innerHTML);
+        // Displays a dialog box with a message and an "ok" button to close the box.
+        window.alert("Using the global DOM oject window with alert property");
+        // Displays a dialog box with a message and returns true if user clicks "ok" and false if user clicks "cancel".
+        window.confirm("Using window DOM object with confirm property - returns true if user clicks ok else returns false");
+        // window.location - Object that represents and alters the web address of the window or tab.
+        // window.console - Represents the debugging console. Most common and basic use is window.console.log() and
+        // since window is a global variable, we can use console.log() directly
+    </script>
+</body>
+</html>
